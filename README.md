@@ -7,7 +7,9 @@ All models, codes and datasets will be released.
 
 ## News
 
-- [x] **2024-04-22** :hugs: We release an online [gradio demo](https://b85e791be5a7a80aab.gradio.live/) of a general instruction-tuned model SEED-X-I. SEED-X-I can follow multimodal instruction (including images with dynamic resolutions) and make responses with images, texts and bounding boxes in multi-turn conversation. SEED-X-I **does not support image manipulation**. If you want to experience SEED-X-Edit for high-precision image editing, the inference code and model will be released soon.
+**2024-04-22** :hugs: We release an online [gradio demo](https://b85e791be5a7a80aab.gradio.live/) of a general instruction-tuned model SEED-X-I. SEED-X-I can follow multimodal instruction (including images with dynamic resolutions) and make responses with images, texts and bounding boxes in multi-turn conversation. SEED-X-I **does not support image manipulation**. If you want to experience SEED-X-Edit for high-precision image editing, the inference code and model will be released soon.
+
+## TODOs
 - [ ] Release the multimodal foundation model SEED-X.
 - [ ] Release the instruction-tuned model SEED-X-Edit for high-precision image editing.
 - [ ] Release 3.7M in-house image editing data.
