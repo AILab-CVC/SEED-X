@@ -1,4 +1,5 @@
 # SEED-X
+[![arXiv](https://img.shields.io/badge/arXiv-2307.08041-b31b1b.svg)](https://arxiv.org/abs/2404.14396)
 [![Demo](https://img.shields.io/badge/Gradio-Demo-orange)](https://b85e791be5a7a80aab.gradio.live/)
 
 We introduce SEED-X, a unified and versatile foundation model, which can serve as various multimodal AI assistants **in the real world** after different instruction tuning, capable of responding to a variety of user needs through unifying **multi-granularity comprehension and generation**.
