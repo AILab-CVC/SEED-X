@@ -1,10 +1,11 @@
 # SEED-X
 [![arXiv](https://img.shields.io/badge/arXiv-2404.14396-b31b1b.svg)](https://arxiv.org/abs/2404.14396)
 [![Demo](https://img.shields.io/badge/Gradio-Demo-orange)](https://139a5c1d085953f17b.gradio.live/)
+[![Static Badge](https://img.shields.io/badge/Model-Huggingface-yellow)](https://huggingface.co/AILab-CVC/SEED-X-17B)
 
 We introduce SEED-X, a unified and versatile foundation model, which can serve as various multimodal AI assistants **in the real world** after different instruction tuning, capable of responding to a variety of user needs through unifying **multi-granularity comprehension and generation**.
 
-All models, codes and datasets will be released. 
+All models and inference code are released! 
 
 ## News
 **2024-04-22** :hugs: We release the [models](https://huggingface.co/AILab-CVC/SEED-X-17B) including the pre-trained foundation model **SEED-X**, the general instruction-tuned model **SEED-X-I**, the editing model **SEED-X-Edit**, and our de-tokenier, which can generate realistic images from ViT features (w/o or w/ a condition image).
