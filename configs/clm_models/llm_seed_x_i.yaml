@@ -1,0 +1,3 @@
+  _target_: src.models.mllm.modeling_llama_xformer.LlamaForCausalLM.from_pretrained
+  pretrained_model_name_or_path: pretrained/seed_x_i/llm
+  low_cpu_mem_usage: True

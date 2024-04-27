@@ -1,0 +1,20 @@
+_target_: src.models.detokenizer.adapter_modules.SDXLAdapterWithLatentImage.from_pretrained
+
+resampler: 
+  _target_: src.models.detokenizer.resampler.ResamplerXLV2
+  dim: 1024
+  depth: 4
+  dim_head: 64
+  heads: 16
+  num_queries: 64
+  embedding_dim: 4096
+  output1_dim: 768
+  output2_dim: 1280
+  ff_mult: 4
+  normalize: False
+
+full_ft: True
+set_trainable_late: False
+
+vit_down: True
+pretrained_model_path: pretrained/seed_detokenizer/second_stage/pytorch_model.bin

@@ -1,0 +1,23 @@
+_target_: src.models.mllm.seed_x.ContinuousLVLM.from_pretrained
+input_resampler: 
+  _target_: src.models.tokenizer.qwen_visual.Resampler
+  grid_size: 8
+  embed_dim: 5120
+  num_heads: 32
+  kv_dim: 4096
+
+output_resampler:
+  _target_: src.models.tokenizer.qwen_visual.Resampler
+  grid_size: 8
+  embed_dim: 4096
+  num_heads: 32
+  kv_dim: 5120
+
+add_patch_pos: True 
+vit_down: True
+mse: True
+
+lm_loss_scale: 1.0
+rec_loss_scale: 6.0
+
+pretrained_model_path: pretrained/seed_x_edit/agent/pytorch_model.bin

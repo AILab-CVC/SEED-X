@@ -1,0 +1,11 @@
+torch==2.0.1
+hydra-core
+transformers==4.30.2
+diffusers==0.25.0
+sentencepiece
+opencv-python
+deepspeed
+pyrootutils
+xformers>=0.0.20
+accelerate
+transformers_stream_generator
