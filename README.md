@@ -16,6 +16,7 @@ All models and inference code are released!
 - [x] Release the multimodal foundation model SEED-X.
 - [x] Release the instruction-tuned model SEED-X-Edit for high-precision image editing.
 - [ ] Release 3.7M in-house image editing data.
+- [ ] Release trainig code for instruction tuning.
 
 ![image](https://github.com/AILab-CVC/SEED-X/blob/main/demos/teaser.jpg?raw=true)
 
