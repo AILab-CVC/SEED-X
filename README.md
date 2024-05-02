@@ -5,7 +5,7 @@
 
 We introduce SEED-X, a unified and versatile foundation model, which can serve as various multimodal AI assistants **in the real world** after different instruction tuning, capable of responding to a variety of user needs through unifying **multi-granularity comprehension and generation**.
 
-All models and inference code are released! 
+All models, instruction tuning code and inference code are released! 
 
 ## News
 **2024-05-02** :hugs: We release the **training code** for instruction tuning from the pre-trained foundation model **SEED-X**. Our codebase supports (a) large-scale multi-node training with deepspeed zero-2 and zero-3, (b) highly-efficient multiple training datapipes. To the best of our knowledge, our SEED series is the first open-source work on training MLLM that unifies multimodal comprehension and generation.
