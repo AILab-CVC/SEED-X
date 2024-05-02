@@ -1,0 +1,46 @@
+_target_: src.data.sft_clm.build_multi_datapipes
+_recursive_: False
+datapipes:
+
+  - _target_: src.data.sft_clm.build_single_turn_edit_datapipes
+    data_dir: 
+      - data/SEED-Data-Edit-Part1-Openimages/auto_editing/openimages/annotations
+    image_dir: data/SEED-Data-Edit-Part1-Openimages/auto_editing/openimages/images
+    max_length: 320
+    batch_size: 6
+    instruction_prompt: "[INST] {instruction} [/INST]\n"
+    min_aspect_ratio: 0.6
+    min_resolution: 400
+    prompt_drop_ratio: 0.0
+    use_polite_response: True
+    num_img_in_tokens: 64
+    num_img_out_tokens: 64
+    cycle_count: 1000
+    multi_resolution: True
+    resolution_grids: 
+      - 1x1
+    base_resolution: 448
+
+
+  - _target_: src.data.sft_clm.build_single_turn_edit_datapipes
+    data_dir: 
+      - data/SEED-Data-Edit-Part1-Unsplash/auto_editing/unsplash/annotations
+    image_dir: data/SEED-Data-Edit-Part1-Unsplash/auto_editing/unsplash/images
+    max_length: 320
+    batch_size: 6
+    instruction_prompt: "[INST] {instruction} [/INST]\n"
+    min_aspect_ratio: 0.6
+    min_resolution: 400
+    prompt_drop_ratio: 0.0
+    use_polite_response: True
+    num_img_in_tokens: 64
+    num_img_out_tokens: 64
+    cycle_count: 1000
+    multi_resolution: True
+    resolution_grids: 
+      - 1x1
+    base_resolution: 448
+
+sample_weights:
+  - 0.4
+  - 0.2  

@@ -71,9 +71,7 @@ class ContinuousLVLM(nn.Module):
         else:
             image_embeds_cmp_fake = torch.randn(  1 , self.output_resampler.num_queries,
                                        self.output_resampler.embed_dim).to(input_embeds.device, dtype=input_embeds.dtype)
-            
-            # image_embeds = torch.randn(bz, self.output_resampler.num_queries,
-            #                            self.output_resampler.embed_dim).to(input_embeds.device, dtype=input_embeds.dtype)
+
             image_embeds_lm = self.input_resampler(image_embeds_cmp_fake)
             if self.add_patch_pos:
                 rel_pos_embed = self.patch_pos_embed.mean(0, keepdim=True).unsqueeze(1) # 1, 1, dim
@@ -122,9 +120,7 @@ class ContinuousLVLM(nn.Module):
             output_image_embeds = torch.randn(1, self.input_resampler.num_queries,
                                               self.input_resampler.embed_dim).to(input_embeds.device, dtype=input_embeds.dtype) + 0.0 * last_hidden_state[0, :self.input_resampler.num_queries, :]
             recon_image_embeds = self.output_resampler(output_image_embeds)
-            # target_embeds = torch.randn(1, self.output_resampler.num_queries,
-            #                             self.output_resampler.embed_dim).to(input_embeds.device, dtype=input_embeds.dtype)
-            # rec_loss = cosine_loss(recon_image_embeds, target_embeds.detach) * 0.0
+
             rec_loss = 0.0 * recon_image_embeds.sum()
 
         total_loss = self.lm_loss_scale * lm_loss + self.rec_loss_scale * rec_loss

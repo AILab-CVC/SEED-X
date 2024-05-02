@@ -1,0 +1,51 @@
+_target_: src.data.sft_clm.build_multi_datapipes
+_recursive_: False
+datapipes:
+  - _target_: src.data.sft_clm.build_llava_jsonl_datapipes
+    data_dir: data/shareGPT4V/sharegpt4v_vqa_mix711k_split_format
+    image_dir: data/shareGPT4V/data
+    max_length: 880
+    batch_size: 2
+    instruction_prompt: "[INST] {instruction} [/INST]\n"
+    num_img_in_tokens: 64
+    num_img_out_tokens: 64
+    cycle_count: 20
+    multi_resolution: True
+    resolution_grids: 
+      - 1x1
+      - 1x2
+      - 1x3
+      - 2x1
+      - 3x1
+      - 1x4
+      - 4x1
+      - 2x2
+    base_resolution: 448
+    dataset_name: shareGPT4V
+
+  - _target_: src.data.image_text_pairs_clm.build_caption_datapipes_with_pixels
+    data_dir:
+      - data/unsplash_resize/webdataset
+    max_length: 260
+    batch_size: 8
+    similarity_thr: 0.1
+    min_resolution: 400
+    min_aspect_ratio: 0.6
+    use_caption_in_metadata: False
+    instruction_prompt: "[INST] {instruction} [/INST]\n"
+    add_gen_prompt: True
+    caption_key_in_metadata: 'top_caption'
+    img_first_ratio: -1.0
+    num_img_in_tokens: 64
+    num_img_out_tokens: 64
+    assure_text: True
+    cycle_count: 12
+    multi_resolution: True
+    resolution_grids: 
+      - 1x1
+    base_resolution: 448
+    dataset_name: unsplash
+
+sample_weights:  
+  - 0.6    
+  - 0.2 

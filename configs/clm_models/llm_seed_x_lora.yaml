@@ -1,0 +1,25 @@
+_target_: src.models.mllm.peft_models.get_peft_model_with_resize_embedding
+model:
+  _target_: src.models.mllm.modeling_llama_xformer.LlamaForCausalLM.from_pretrained
+  pretrained_model_name_or_path: pretrained/seed_x/llm
+peft_config:
+  _target_: peft.LoraConfig
+  _convert_: object
+  r: 32
+  lora_alpha: 32
+  modules_to_save:
+    - input_layernorm
+    - post_attention_layernorm
+    - norm
+  target_modules: 
+    - q_proj 
+    - v_proj 
+    - k_proj 
+    - o_proj 
+    - gate_proj 
+    - down_proj 
+    - up_proj
+  task_type: CAUSAL_LM
+  lora_dropout: 0.05
+
+vocab_size: 32330
