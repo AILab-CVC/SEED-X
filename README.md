@@ -82,6 +82,7 @@ python3 src/inference/eval_img2edit_seed_x_edit.py
 ```
 
 ### Instruction Tuning
+#### Training
 1. Prepare the pretrained models including the pre-trained foundation model **SEED-X** and the visual encoder of Qwen-VL-Chat (See Model Weights).
 2. Prepare the instruction tuning data. For example, for "build_llava_jsonl_datapipes" dataloader, each folder stores a number of jsonl files, each jsonl file contains 10K pieces of content, with an example of the content as follows:
 ```bash
@@ -105,7 +106,30 @@ sh scripts/train_seed_x_sft_comp_gen.sh
 # For training language-guided image editing
 sh scripts/train_seed_x_sft_edit.sh
 ```
-
+#### Inference with your own model
+1. Obtain "pytorch_model.bin" with the following script.
+```bash
+cd train_output/seed_x_sft_comp_gen/checkpoint-xxxx
+python3 zero_to_fp32.py . pytorch_model.bin
+```
+2. Change "pretrained_model_path" in "configs/clm_models/agent_seed_x.yaml" with the new checkpoint. For example,
+```bash
+pretrained_model_path: train_output/seed_x_sft_comp_gen/checkpoint-4000/pytorch_model.bin
+```
+3. Change the "llm_cfg_path" and "agent_cfg_path" in the inference script (See below), which will automatically load the trained LoRA weights onto the pretrained model SEED-X.
+```bash
+llm_cfg_path = 'configs/clm_models/llm_seed_x_lora.yaml'
+agent_cfg_path = 'configs/clm_models/agent_seed_x.yaml'
+```
+4. Run the inference script,
+```bash
+# For image comprehension
+python3 src/inference/eval_img2text_seed_x_i.py
+# For image generation
+python3 src/inference/eval_text2img_seed_x_i.py
+# For image editing
+python3 src/inference/eval_img2edit_seed_x_edit.py
+```
 
 
 ## Citation
