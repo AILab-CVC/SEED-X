@@ -8,6 +8,8 @@ We introduce SEED-X, a unified and versatile foundation model, which can serve a
 All models, instruction tuning code and inference code are released! 
 
 ## News
+**2024-05-03** :hugs: We release **3.7M image editing data** [SEED-Data-Edit](https://huggingface.co/datasets/AILab-CVC/SEED-Data-Edit), which includes (1) Large-scale high-quality editing data produced by an **automatic pipeline**, (2) **Real-world scenario data** scraped from the internet that more accurately reflects user image editing intentions, (3) High-precision **multi-turn** editing data annotated by Photoshop experts
+
 **2024-05-02** :hugs: We release the **training code** for instruction tuning from the pre-trained foundation model **SEED-X**. Our codebase supports (a) large-scale multi-node training with deepspeed zero-2 and zero-3, (b) highly-efficient multiple training datapipes. To the best of our knowledge, our SEED series is the first open-source work on training MLLM that unifies multimodal comprehension and generation.
 
 **2024-04-27** :hugs: We release the [models](https://huggingface.co/AILab-CVC/SEED-X-17B/tree/main) including the pre-trained foundation model **SEED-X**, the general instruction-tuned model **SEED-X-I**, the editing model **SEED-X-Edit**, and our de-tokenier, which can generate realistic images from ViT features (w/o or w/ a condition image).
@@ -17,12 +19,24 @@ All models, instruction tuning code and inference code are released!
 ## TODOs
 - [x] Release the multimodal foundation model SEED-X.
 - [x] Release the instruction-tuned model SEED-X-Edit for high-precision image editing.
-- [ ] Release 3.7M in-house image editing data.
+- [x] Release 3.7M in-house image editing data.
 - [x] Release trainig code for instruction tuning.
 
 ![image](https://github.com/AILab-CVC/SEED-X/blob/main/demos/teaser.jpg?raw=true)
 
 ![image](https://github.com/AILab-CVC/SEED-X/blob/main/demos/case_example.jpg?raw=true)
+The introduced SEED-X, a unified and versatile foundation model, can serve as various multimodal AI assistants **in the real world** after different instruction tuning, capable of responding to a variety of user needs through unifying
+**multi-granularity comprehension and generation**. Our instruction tuned models can
+function as an interactive designer, generating images without descriptive captions while illustrating
+creative intent, and showcasing visualizations of modified images based on user’s intent. They can act
+as knowledgeable personal assistants, comprehending images of arbitrary sizes and offering relevant
+suggestions in multi-turn conversations
+
+![image](https://github.com/AILab-CVC/SEED-X/blob/main/demos/SEED-Data-Edit.jpg?raw=true)
+Data examples of instruction-guided image editing in SEED-Data-Edit, which includes (1)
+High-quality editing data produced by an **automatic pipeline** (first row), (2) **Real-world scenario
+data** scraped from the internet that more accurately reflects user image editing intentions (second
+row), (3) High-precision **multi-turn** editing data annotated by Photoshop experts (third row).
 
 
 ## Usage
