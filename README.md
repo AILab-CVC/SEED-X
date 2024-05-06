@@ -1,6 +1,6 @@
 # SEED-X
 [![arXiv](https://img.shields.io/badge/arXiv-2404.14396-b31b1b.svg)](https://arxiv.org/abs/2404.14396)
-[![Demo](https://img.shields.io/badge/Gradio-Demo-orange)](https://139a5c1d085953f17b.gradio.live/)
+[![Demo](https://img.shields.io/badge/Gradio-Demo-orange)](https://e61930042a74e70190.gradio.live/)
 [![Static Badge](https://img.shields.io/badge/Model-Huggingface-yellow)](https://huggingface.co/AILab-CVC/SEED-X-17B/tree/main)
 [![Static Badge](https://img.shields.io/badge/Dataset-Huggingface-yellow)](https://huggingface.co/datasets/AILab-CVC/SEED-Data-Edit)
 
@@ -15,7 +15,7 @@ All models, instruction tuning code and inference code are released!
 
 **2024-04-27** :hugs: We release the [models](https://huggingface.co/AILab-CVC/SEED-X-17B/tree/main) including the pre-trained foundation model **SEED-X**, the general instruction-tuned model **SEED-X-I**, the editing model **SEED-X-Edit**, and our de-tokenier, which can generate realistic images from ViT features (w/o or w/ a condition image).
 
-**2024-04-22** :hugs: We release an online [gradio demo](https://139a5c1d085953f17b.gradio.live/) of a general instruction-tuned model SEED-X-I. SEED-X-I can follow multimodal instruction (including images with dynamic resolutions) and make responses with images, texts and bounding boxes in multi-turn conversation. SEED-X-I **does not support image manipulation**. If you want to experience SEED-X-Edit for high-precision image editing, the inference code and model will be released soon.
+**2024-04-22** :hugs: We release an online [gradio demo](https://e61930042a74e70190.gradio.live/) of a general instruction-tuned model SEED-X-I. SEED-X-I can follow multimodal instruction (including images with dynamic resolutions) and make responses with images, texts and bounding boxes in multi-turn conversation. SEED-X-I **does not support image manipulation**. If you want to experience SEED-X-Edit for high-precision image editing, the inference code and model will be released soon.
 
 ## TODOs
 - [x] Release the multimodal foundation model SEED-X.
