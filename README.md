@@ -1,7 +1,7 @@
 # SEED-X
 [![arXiv](https://img.shields.io/badge/arXiv-2404.14396-b31b1b.svg)](https://arxiv.org/abs/2404.14396)
-[![Demo](https://img.shields.io/badge/Gradio-Demo-orange)](https://e61930042a74e70190.gradio.live/)
-[![Static Badge](https://img.shields.io/badge/Model-Huggingface-yellow)](https://huggingface.co/spaces/tttoaster/SEED-X-17B)
+[![Demo](https://img.shields.io/badge/Gradio-Demo-orange)](https://huggingface.co/spaces/tttoaster/SEED-X-17B)
+[![Static Badge](https://img.shields.io/badge/Model-Huggingface-yellow)](https://huggingface.co/AILab-CVC/SEED-X-17B/tree/main)
 [![arXiv](https://img.shields.io/badge/arXiv-2405.04007-b31b1b.svg)](https://arxiv.org/abs/2405.04007)
 [![Static Badge](https://img.shields.io/badge/Dataset-Huggingface-yellow)](https://huggingface.co/datasets/AILab-CVC/SEED-Data-Edit)
 
