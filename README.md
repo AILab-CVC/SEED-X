@@ -1,5 +1,6 @@
 # SEED-X
 [![arXiv](https://img.shields.io/badge/arXiv-2404.14396-b31b1b.svg)](https://arxiv.org/abs/2404.14396)
+[![Demo](https://img.shields.io/badge/ARC-Demo-blue)](https://arc.tencent.com/en/ai-demos/multimodal)
 [![Demo](https://img.shields.io/badge/Gradio-Demo-orange)](https://huggingface.co/spaces/tttoaster/SEED-X-17B)
 [![Static Badge](https://img.shields.io/badge/Model-Huggingface-yellow)](https://huggingface.co/AILab-CVC/SEED-X-17B/tree/main)
 [![arXiv](https://img.shields.io/badge/arXiv-2405.04007-b31b1b.svg)](https://arxiv.org/abs/2405.04007)
@@ -10,6 +11,8 @@ We introduce SEED-X, a unified and versatile foundation model, which can serve a
 All models, instruction tuning code and inference code are released! 
 
 ## News
+**2024-05-21** :hugs: A new online [demo](https://arc.tencent.com/en/ai-demos/multimodal) of the general instruction-tuned model SEED-X-I is available, with faster inference speed than the demo using Zero GPU on huggingface.
+
 **2024-05-03** :hugs: We release **3.7M image editing data** [SEED-Data-Edit](https://huggingface.co/datasets/AILab-CVC/SEED-Data-Edit), which includes (1) Large-scale high-quality editing data produced by an **automatic pipeline**, (2) **Real-world scenario data** scraped from the internet that more accurately reflects user image editing intentions, (3) High-precision **multi-turn** editing data annotated by Photoshop experts.
 
 **2024-05-02** :hugs: We release the **training code** for instruction tuning from the pre-trained foundation model **SEED-X**. Our codebase supports (a) large-scale multi-node training with deepspeed zero-2 and zero-3, (b) highly-efficient multiple training datapipes. To the best of our knowledge, our SEED series is the first open-source work on training MLLM that unifies multimodal comprehension and generation.
