@@ -27,6 +27,7 @@ All models, instruction tuning code and inference code are released!
 - [x] Release 3.7M in-house image editing data.
 - [x] Release trainig code for instruction tuning.
 
+## Introduction
 ![image](https://github.com/AILab-CVC/SEED-X/blob/main/demos/teaser.jpg?raw=true)
 
 ![image](https://github.com/AILab-CVC/SEED-X/blob/main/demos/case_example.jpg?raw=true)
@@ -37,6 +38,10 @@ creative intent, and showcasing visualizations of modified images based on userâ
 as knowledgeable personal assistants, comprehending images of arbitrary sizes and offering relevant
 suggestions in multi-turn conversations.
 
+![image](https://github.com/AILab-CVC/SEED-X/blob/main/demos/combination_seed_x.jpg?raw=true)
+SEED-X is able to take multiple images as input, and follow its aesthetic vision and transform mediocre (or even low-resolution and low-quality) photos into something more impressive (In the example above, some of the input images have a resolution lower than 200). Feel free to try it by yourself in [demo](https://arc.tencent.com/en/ai-demos/multimodal) (Set "Force Image Generation" as True).
+
+## [SEED-Data-Edit](https://huggingface.co/datasets/AILab-CVC/SEED-Data-Edit)
 ![image](https://github.com/AILab-CVC/SEED-X/blob/main/demos/SEED-Data-Edit.jpg?raw=true)
 Data examples of instruction-guided image editing in SEED-Data-Edit, which includes (1)
 High-quality editing data produced by an **automatic pipeline** (first row), (2) **Real-world scenario
