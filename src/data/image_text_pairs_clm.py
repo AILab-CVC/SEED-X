@@ -99,7 +99,6 @@ def base64_to_image(base64_str: str) -> Image.Image:
 
 def encode_caption_input_ids(caption, tokenizer, img_first_ratio, max_length, num_img_in_tokens=64, num_img_out_tokens=64):
     caption_ids = tokenizer.encode(caption, add_special_tokens=False)
-    caption_labels = caption_ids
 
     img_first_flag = np.random.uniform(0, 1) < img_first_ratio
 
@@ -107,6 +106,7 @@ def encode_caption_input_ids(caption, tokenizer, img_first_ratio, max_length, nu
         img_first_flag = True
 
     if img_first_flag:
+        caption_labels = caption_ids
         image_tokens = BOI_TOKEN + ''.join([IMG_TOKEN.format(int(item)) for item in range(num_img_in_tokens)]) + EOI_TOKEN
 
         image_ids = tokenizer.encode(image_tokens, add_special_tokens=False)
@@ -121,7 +121,7 @@ def encode_caption_input_ids(caption, tokenizer, img_first_ratio, max_length, nu
         embeds_cmp_mask = True
 
     else:
-
+        caption_labels = [-100] * len(caption_ids)
         image_tokens = BOI_TOKEN + ''.join([IMG_TOKEN.format(int(item)) for item in range(num_img_out_tokens)]) + EOI_TOKEN
 
         image_ids = tokenizer.encode(image_tokens, add_special_tokens=False)
@@ -171,7 +171,6 @@ def encode_caption_input_ids(caption, tokenizer, img_first_ratio, max_length, nu
 
 def encode_caption_input_ids_v2(caption, tokenizer, img_first_ratio, max_length, num_img_in_tokens=64, num_img_out_tokens=64, patch_length=1):
     caption_ids = tokenizer.encode(caption, add_special_tokens=False)
-    caption_labels = caption_ids
 
     img_first_flag = np.random.uniform(0, 1) < img_first_ratio
 
@@ -179,7 +178,8 @@ def encode_caption_input_ids_v2(caption, tokenizer, img_first_ratio, max_length,
         img_first_flag = True
 
     if img_first_flag:
-
+        caption_labels = caption_ids
+        
         image_tokens = ''
         for i in range(patch_length-1):
             image_tokens += BOP_TOKEN + ''.join([IMG_TOKEN.format(int(item)) for item in range(num_img_in_tokens)]) + EOP_TOKEN
@@ -205,7 +205,8 @@ def encode_caption_input_ids_v2(caption, tokenizer, img_first_ratio, max_length,
         embeds_cmp_mask = [True]*patch_length
 
     else:
-
+        caption_labels = [-100] * len(caption_ids)
+        
         image_tokens = BOI_TOKEN + ''.join([IMG_TOKEN.format(int(item)) for item in range(num_img_out_tokens)]) + EOI_TOKEN
 
         image_ids = tokenizer.encode(image_tokens, add_special_tokens=False)
