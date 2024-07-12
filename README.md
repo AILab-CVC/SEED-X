@@ -50,6 +50,10 @@ High-quality editing data produced by an **automatic pipeline** (first row), (2)
 data** scraped from the internet that more accurately reflects user image editing intentions (second
 row), (3) High-precision **multi-turn** editing data annotated by Photoshop experts (third row).
 
+## [SEED-Story](https://github.com/TencentARC/SEED-Story)
+The introduced SEED-Story, powered by SEED-X, is capable of **generating multimodal long stories** from user-provided images and texts as the beginning of the story. The generated story consists of rich and coherent narrative texts, along with images that are consistent in characters and style. The story can span up to 25 multimodal sequences, even though we only use a maximum of 10 sequences during training.
+
+![image](https://github.com/TencentARC/SEED-Story/blob/master/assets/teaser.jpg)
 
 ## Usage
 
