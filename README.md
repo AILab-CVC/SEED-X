@@ -11,6 +11,8 @@ We introduce SEED-X, a unified and versatile foundation model, which can serve a
 All models, instruction tuning code and inference code are released! 
 
 ## News
+**2024-07-12** :hugs: We release [SEED-Story](https://github.com/TencentARC/SEED-Story), a MLLM capable of generating multimodal long stories based on the pre-trained SEED-X (an earlier version). We also release StoryStream, a large-scale dataset designed for training and benchmarking multimodal story generation.
+
 **2024-05-21** :hugs: A new online [demo](https://arc.tencent.com/en/ai-demos/multimodal) of the general instruction-tuned model SEED-X-I is available, with faster inference speed than the demo using Zero GPU on huggingface.
 
 **2024-05-03** :hugs: We release **3.7M image editing data** [SEED-Data-Edit](https://huggingface.co/datasets/AILab-CVC/SEED-Data-Edit), which includes (1) Large-scale high-quality editing data produced by an **automatic pipeline**, (2) **Real-world scenario data** scraped from the internet that more accurately reflects user image editing intentions, (3) High-precision **multi-turn** editing data annotated by Photoshop experts.
