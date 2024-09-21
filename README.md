@@ -73,6 +73,12 @@ Clone the repo and install dependent packages
 ### Model Weights
 We release the pretrained De-Tokenizer, the pre-trained foundation model **SEED-X**, the general instruction-tuned model **SEED-X-I**, the editing model **SEED-X-Edit** in in [SEED-X-17B Hugging Face](https://huggingface.co/AILab-CVC/SEED-X-17B/tree/main).
 
+You can also download them separately as below,
+- Check the SEED-X de-tokenizer weights in [AILab-CVC/seed-x-17b-de-tokenizer](https://huggingface.co/AILab-CVC/seed-x-17b-de-tokenizer)
+- Check the pre-trained foundation model **SEED-X** weights in [AILab-CVC/seed-x-17b-pretrain](https://huggingface.co/AILab-CVC/seed-x-17b-pretrain)
+- Check the general instruction-tuned model **SEED-X-I** weights in [AILab-CVC/seed-x-17b-instruct](https://huggingface.co/AILab-CVC/seed-x-17b-instruct)
+- Check  the editing model **SEED-X-Edit** weights in [AILab-CVC/seed-x-17b-edit](https://huggingface.co/AILab-CVC/seed-x-17b-edit)
+
 Please download the checkpoints and save them under the folder `./pretrained`. For example, `./pretrained/seed_x`.
 
 You also need to download [stable-diffusion-xl-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) and [Qwen-VL-Chat](https://huggingface.co/Qwen/Qwen-VL-Chat), and save them under the folder `./pretrained`. Please use the following script to extract the weights of visual encoder in Qwen-VL-Chat.
