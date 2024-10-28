@@ -5,7 +5,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2405.04007-b31b1b.svg)](https://arxiv.org/abs/2405.04007)
 [![Static Badge](https://img.shields.io/badge/Dataset-Huggingface-yellow)](https://huggingface.co/datasets/AILab-CVC/SEED-Data-Edit)
 
-We introduce SEED-X, a unified and versatile foundation model, which can serve as various multimodal AI assistants **in the real world** after different instruction tuning, capable of responding to a variety of user needs through unifying **multi-granularity comprehension and generation**.
+We introduce [SEED-X](https://arxiv.org/abs/2404.14396), a unified and versatile foundation model, which can serve as various multimodal AI assistants **in the real world** after different instruction tuning, capable of responding to a variety of user needs through unifying **multi-granularity comprehension and generation**.
 
 All models, instruction tuning code and inference code are released! 
 
