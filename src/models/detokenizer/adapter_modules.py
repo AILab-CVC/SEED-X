@@ -133,7 +133,7 @@ class SDXLAdapter(nn.Module):
                  image_pil=None,
                  image_tensor=None,
                  image_embeds=None,
-                 seed=42,
+                 seed=None,
                  height=1024,
                  width=1024,
                  guidance_scale=7.5,
